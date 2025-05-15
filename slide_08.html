@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<html lang="it">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>FG ADVICE - Innovazione &amp; Tecnologia</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+<style>
+    body, html { margin: 0; padding: 0; font-family: 'Segoe UI', sans-serif; }
+    .container { padding: 2rem; max-width: 1000px; margin: auto; }
+    h1 { font-size: 2rem; font-weight: bold; color: #1e3a8a; margin-bottom: 1.5rem; }
+    h1::after { content: ""; display: block; width: 80px; height: 4px; background: #3b82f6; margin-top: 4px; }
+    p.intro { font-size: 1rem; color: #475569; margin-bottom: 2rem; }
+    .grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; }
+    @media(min-width: 768px) {
+      .grid { grid-template-columns: 1fr 1fr; }
+    }
+    .card { background: white; padding: 1rem; border-radius: 0.75rem; box-shadow: 0 4px 6px rgba(0,0,0,0.05); transition: transform 0.3s ease; }
+    .card:hover { transform: translateY(-5px); }
+    .icon { font-size: 1.5rem; color: #1e3a8a; margin-bottom: 0.5rem; }
+    .title { font-size: 1.1rem; font-weight: 600; color: #1e3a8a; margin-bottom: 0.25rem; }
+    .desc { font-size: 0.95rem; color: #475569; }
+    .tags { margin-top: 0.5rem; display: flex; flex-wrap: wrap; gap: 0.5rem; }
+    .tag { background: #dbeafe; color: #1e40af; padding: 0.25rem 0.5rem; border-radius: 0.25rem; font-size: 0.75rem; }
+    .nav { display: flex; justify-content: space-between; margin-top: 2rem; }
+    .nav a { background: #1e3a8a; color: white; padding: 0.5rem 1rem; border-radius: 0.5rem; text-decoration: none; font-weight: 500; }
+    .nav a:hover { background: #3b82f6; }
+  </style>
+</head>
+<body>
+<div class="top-bar" style="position: fixed; top: 0; left: 0; right: 0; z-index: 1000; display: flex; justify-content: space-between; align-items: center; background: rgba(255, 255, 255, 0.9); padding: 0.5rem 1rem; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+<img alt="FG Advice Logo" src="./LOGO_BIANCO-removebg.png" style="height: 40px;"/>
+<a href="index.html" style="background: #1e3a8a; color: white; padding: 0.4rem 0.8rem; border-radius: 0.5rem; text-decoration: none; font-weight: 500;">Home</a>
+</div>
+<div style="height: 70px;"></div> <!-- Spacer per evitare contenuti nascosti dal logo -->
+
+<div class="container">
+<h1>Innovazione &amp; Tecnologia</h1>
+<p class="intro">Accompagniamo le imprese nei processi di trasformazione digitale, cybersecurity e gestione dei dati.</p>
+<div class="grid">
+<div class="card">
+<div class="icon"><i class="fas fa-robot"></i></div>
+<div class="title">Digital Transformation</div>
+<div class="desc">Percorsi di innovazione con focus su automazione, AI e processi digitali.</div>
+<div class="tags"><span class="tag">AI</span><span class="tag">Industria 5.0</span></div>
+</div>
+<div class="card">
+<div class="icon"><i class="fas fa-shield-alt"></i></div>
+<div class="title">Cybersecurity &amp; NIS2</div>
+<div class="desc">Piani di sicurezza per le infrastrutture aziendali in conformità alla Direttiva Europea.</div>
+<div class="tags"><span class="tag">NIS2</span><span class="tag">Risk Assessment</span></div>
+</div>
+<div class="card">
+<div class="icon"><i class="fas fa-database"></i></div>
+<div class="title">Data Governance</div>
+<div class="desc">Organizzazione e protezione dei dati aziendali secondo i principi GDPR e trasparenza.</div>
+<div class="tags"><span class="tag">Privacy</span><span class="tag">Compliance</span></div>
+</div>
+<div class="card">
+<div class="icon"><i class="fas fa-project-diagram"></i></div>
+<div class="title">Smart Strategy</div>
+<div class="desc">Uso di tecnologie emergenti per migliorare competitività, efficienza e scalabilità.</div>
+<div class="tags"><span class="tag">Blockchain</span><span class="tag">IoT</span></div>
+</div>
+</div>
+<div class="nav">
+<a href="slide_07.html">← Indietro</a>
+<a href="slide_09.html">Avanti →</a>
+</div>
+</div>
+</body>
+</html>

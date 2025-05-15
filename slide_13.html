@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html lang="it">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>FG ADVICE - Contatti</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+<style>
+    
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(-45deg, #1e3a8a, #2563eb, #60a5fa, #1e40af);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+}
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+    .container { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 2rem; text-align: center; background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%); }
+    h1 { font-size: 2rem; font-weight: bold; color: #1e3a8a; margin-bottom: 1rem; }
+    h1::after { content: ""; display: block; width: 60px; height: 4px; background: #3b82f6; margin: 0.5rem auto; }
+    .info { font-size: 1rem; color: #334155; margin-bottom: 0.75rem; }
+    .social { margin-top: 1.5rem; display: flex; gap: 1rem; justify-content: center; }
+    .social a { color: #1e3a8a; font-size: 1.5rem; transition: color 0.3s; }
+    .social a:hover { color: #3b82f6; }
+    .nav { display: flex; justify-content: center; margin-top: 2rem; }
+    .nav a { background: #1e3a8a; color: white; padding: 0.5rem 1.25rem; border-radius: 0.5rem; text-decoration: none; font-weight: 500; }
+    .nav a:hover { background: #3b82f6; }
+  </style>
+</head>
+<body>
+<div class="top-bar" style="position: fixed; top: 0; left: 0; right: 0; z-index: 1000; display: flex; justify-content: space-between; align-items: center; background: rgba(255, 255, 255, 0.9); padding: 0.5rem 1rem; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+<img alt="FG Advice Logo" src="./LOGO_BIANCO-removebg.png" style="height: 40px;"/>
+<a href="index.html" style="background: #1e3a8a; color: white; padding: 0.4rem 0.8rem; border-radius: 0.5rem; text-decoration: none; font-weight: 500;">Home</a>
+</div>
+<div style="height: 70px;"></div> <!-- Spacer per evitare contenuti nascosti dal logo -->
+<div class="container">
+<h1>Contatti</h1>
+<p class="info"><i class="fas fa-map-marker-alt"></i> Via Montenapoleone 21, 20121 Milano (MI)</p>
+<p class="info"><i class="fas fa-envelope"></i> info@fgadvicemilano.it</p>
+<p class="info"><i class="fas fa-globe"></i> www.fgadvicemilano.it</p>
+<div class="social">
+<a href="#"><i class="fab fa-linkedin"></i></a>
+<a href="#"><i class="fab fa-facebook"></i></a>
+<a href="#"><i class="fab fa-instagram"></i></a>
+</div>
+<div class="nav">
+<a href="slide_12.html">← Indietro</a>
+</div>
+</div>
+</body>
+</html>

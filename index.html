@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html lang="it">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>FG ADVICE S.R.L. - Copertina</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<style>
+    
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(-45deg, #1e3a8a, #2563eb, #60a5fa, #1e40af);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+}
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+    .container { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; background: linear-gradient(135deg, #081b4e, #2563eb); color: white; text-align: center; padding: 2rem; }
+    h1 { font-size: 3rem; font-weight: 800; background: linear-gradient(to right, #ffffff, #a5c4ff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 1rem; }
+    p { font-size: 1.2rem; max-width: 600px; margin-bottom: 2rem; }
+    .buttons a { display: inline-block; margin: 0.5rem; padding: 0.75rem 1.5rem; background: white; color: #1e3a8a; border-radius: 0.5rem; text-decoration: none; font-weight: 600; transition: background 0.3s; }
+    .buttons a:hover { background: #e0e7ff; }
+    footer { margin-top: 2rem; font-size: 0.875rem; opacity: 0.7; }
+  </style>
+</head>
+<body>
+<div class="top-bar" style="position: fixed; top: 0; left: 0; right: 0; z-index: 1000; display: flex; justify-content: space-between; align-items: center; background: rgba(255, 255, 255, 0.9); padding: 0.5rem 1rem; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+<img alt="FG Advice Logo" src="./LOGO_BIANCO-removebg.png" style="height: 40px;"/>
+<a href="index.html" style="background: #1e3a8a; color: white; padding: 0.4rem 0.8rem; border-radius: 0.5rem; text-decoration: none; font-weight: 500;">Home</a>
+</div>
+<div style="height: 70px;"></div> <!-- Spacer per evitare contenuti nascosti dal logo -->
+<div class="container">
+<h1>FG ADVICE</h1>
+<p>Consulenza strategica, legale e finanziaria per imprese che guardano lontano</p>
+<div class="buttons">
+<a href="slide_02.html">Inizia la presentazione</a>
+</div>
+<footer>
+      Via Montenapoleone 21, Milano · www.fgadvicemilano.it
+    </footer>
+</div>
+</body>
+</html>

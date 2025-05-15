@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<html lang="it">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>FG ADVICE - Consulenza Strategica</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+<style>
+    body, html { margin: 0; padding: 0; font-family: 'Segoe UI', sans-serif; }
+    .container { padding: 2rem; max-width: 1000px; margin: auto; }
+    h1 { font-size: 2rem; font-weight: bold; color: #1e3a8a; margin-bottom: 1rem; }
+    h1::after { content: ""; display: block; width: 80px; height: 4px; background: #3b82f6; margin-top: 4px; }
+    p.intro { font-size: 1rem; color: #475569; margin-bottom: 2rem; }
+    .grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; }
+    @media(min-width: 768px) {
+      .grid { grid-template-columns: 1fr 1fr; }
+    }
+    .card { background: white; padding: 1rem; border-radius: 0.75rem; box-shadow: 0 4px 6px rgba(0,0,0,0.05); transition: transform 0.3s ease; }
+    .card:hover { transform: translateY(-5px); }
+    .icon { font-size: 1.5rem; color: #1e3a8a; margin-bottom: 0.5rem; }
+    .title { font-size: 1.1rem; font-weight: 600; color: #1e3a8a; margin-bottom: 0.25rem; }
+    .desc { font-size: 0.95rem; color: #475569; }
+    .tags { margin-top: 0.5rem; display: flex; flex-wrap: wrap; gap: 0.5rem; }
+    .tag { background: #dbeafe; color: #1e40af; padding: 0.25rem 0.5rem; border-radius: 0.25rem; font-size: 0.75rem; }
+    .nav { display: flex; justify-content: space-between; margin-top: 2rem; }
+    .nav a { background: #1e3a8a; color: white; padding: 0.5rem 1rem; border-radius: 0.5rem; text-decoration: none; font-weight: 500; }
+    .nav a:hover { background: #3b82f6; }
+  </style>
+</head>
+<body>
+<div class="top-bar" style="position: fixed; top: 0; left: 0; right: 0; z-index: 1000; display: flex; justify-content: space-between; align-items: center; background: rgba(255, 255, 255, 0.9); padding: 0.5rem 1rem; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+<img alt="FG Advice Logo" src="./LOGO_BIANCO-removebg.png" style="height: 40px;"/>
+<a href="index.html" style="background: #1e3a8a; color: white; padding: 0.4rem 0.8rem; border-radius: 0.5rem; text-decoration: none; font-weight: 500;">Home</a>
+</div>
+<div style="height: 70px;"></div> <!-- Spacer per evitare contenuti nascosti dal logo -->
+
+<div class="container">
+<h1>Consulenza Strategica &amp; Finanza Agevolata</h1>
+<p class="intro">Supportiamo le imprese nella definizione di strategie di crescita e nell’accesso a strumenti di finanza agevolata.</p>
+<div class="grid">
+<div class="card">
+<div class="icon"><i class="fas fa-chart-line"></i></div>
+<div class="title">Business Plan</div>
+<div class="desc">Piani strategici per attrarre investitori e accedere al credito.</div>
+<div class="tags"><span class="tag">SWOT</span><span class="tag">KPI</span><span class="tag">Forecast</span></div>
+</div>
+<div class="card">
+<div class="icon"><i class="fas fa-tasks"></i></div>
+<div class="title">Controllo di Gestione</div>
+<div class="desc">Sistemi per il monitoraggio e l’ottimizzazione delle performance aziendali.</div>
+<div class="tags"><span class="tag">Dashboard</span><span class="tag">Budget</span></div>
+</div>
+<div class="card">
+<div class="icon"><i class="fas fa-handshake"></i></div>
+<div class="title">Operazioni Straordinarie</div>
+<div class="desc">Fusioni, scissioni, conferimenti, valutazioni e due diligence.</div>
+<div class="tags"><span class="tag">M&amp;A</span><span class="tag">Due Diligence</span></div>
+</div>
+<div class="card">
+<div class="icon"><i class="fas fa-industry"></i></div>
+<div class="title">Industria 5.0</div>
+<div class="desc">Digitalizzazione e transizione sostenibile con incentivi pubblici.</div>
+<div class="tags"><span class="tag">Transizione 5.0</span><span class="tag">Innovazione</span></div>
+</div>
+<div class="card" style="grid-column: span 2;">
+<div class="icon"><i class="fas fa-network-wired"></i></div>
+<div class="title">Reti d'Impresa</div>
+<div class="desc">Contratti di rete, collaborazione strategica, integrazione verticale e orizzontale.</div>
+</div>
+</div>
+<div class="nav">
+<a href="slide_04.html">← Indietro</a>
+<a href="slide_06.html">Avanti →</a>
+</div>
+</div>
+</body>
+</html>

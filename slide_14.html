@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FG ADVICE S.R.L. - Copertina</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;600;700;800;900&display=swap" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/three@0.150.1/build/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.11.5/dist/gsap.min.js"></script>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Montserrat', sans-serif;
+      overflow: hidden;
+    }
+    canvas {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+    }
+    .slide-container {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+      background: linear-gradient(135deg, #081b4e, #2563eb);
+      color: white;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 1rem;
+    }
+    h1 {
+      font-size: clamp(2.5rem, 8vw, 5rem);
+      font-weight: 800;
+      letter-spacing: -2px;
+      background: linear-gradient(to right, #ffffff 20%, #a5c4ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 1rem;
+    }
+    .subtitle {
+      font-size: clamp(1rem, 2.5vw, 1.5rem);
+      font-weight: 300;
+      max-width: 600px;
+      margin: 0 auto 1.5rem auto;
+    }
+    .contact-info {
+      font-size: 1rem;
+      margin: 0.5rem auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6rem;
+      opacity: 0.85;
+    }
+    .bottom-info {
+      position: absolute;
+      bottom: 1rem;
+      right: 1rem;
+      font-size: 0.9rem;
+      text-align: right;
+      opacity: 0.6;
+    }
+    @media (max-width: 768px) {
+      .contact-info {
+        flex-direction: column;
+        gap: 0.3rem;
+      }
+      .bottom-info {
+        position: static;
+        margin-top: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <canvas id="particles-canvas"></canvas>
+  <div class="slide-container">
+    <div class="logo text-2xl font-bold tracking-wide mb-2">FG ADVICE</div>
+    <h1>Consulenza Strategica</h1>
+    <div class="subtitle">Legale e finanziaria per imprese che guardano lontano</div>
+    <div class="contact-info">
+      <i class="fas fa-map-marker-alt"></i><span>Via Montenapoleone 21, Milano</span>
+    </div>
+    <div class="contact-info">
+      <i class="fas fa-globe"></i><span>www.fgadvicemilano.it</span>
+    </div>
+    <div class="bottom-info">
+      <div class="year">2025</div>
+      <div class="city">MILANO</div>
+    </div>
+  </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const scene = new THREE.Scene();
+      const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+      const renderer = new THREE.WebGLRenderer({ canvas: document.getElementById('particles-canvas'), alpha: true });
+      renderer.setSize(window.innerWidth, window.innerHeight);
+      camera.position.z = 5;
+
+      const particlesGeometry = new THREE.BufferGeometry();
+      const count = 300;
+      const positions = new Float32Array(count * 3);
+
+      for (let i = 0; i < count * 3; i++) {
+        positions[i] = (Math.random() - 0.5) * 10;
+      }
+
+      particlesGeometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+      const material = new THREE.PointsMaterial({ size: 0.05, color: 0xffffff });
+      const particles = new THREE.Points(particlesGeometry, material);
+      scene.add(particles);
+
+      function animate() {
+        requestAnimationFrame(animate);
+        particles.rotation.y += 0.0005;
+        renderer.render(scene, camera);
+      }
+      animate();
+
+      window.addEventListener('resize', () => {
+        camera.aspect = window.innerWidth / window.innerHeight;
+        camera.updateProjectionMatrix();
+        renderer.setSize(window.innerWidth, window.innerHeight);
+      });
+
+      gsap.from("h1", { y: 30, opacity: 0, duration: 1, delay: 0.2, ease: "power3.out" });
+      gsap.from(".subtitle", { y: 20, opacity: 0, duration: 1, delay: 0.5, ease: "power3.out" });
+      gsap.from(".contact-info", { y: 20, opacity: 0, duration: 1, stagger: 0.3, delay: 0.8, ease: "power3.out" });
+      gsap.from(".bottom-info", { opacity: 0, duration: 1, delay: 1.5, ease: "power3.out" });
+    });
+  </script>
+</body>
+</html>
